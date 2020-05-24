@@ -71,6 +71,10 @@
             margin-bottom: 20px;
 
         }
+        .btn {
+            margin-left: 33px;
+        }
+    
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +86,7 @@
         <div class="sitename">SangjunTech</div>
         <div class="loginform">
             <form method='POST' action=".">
-                { %csrf_token% }
+                {% csrf_token %}
                 <div class="emailbox">
                     <label for="idtext">USERNAME</label>
                     <input type="text" class="email_form" id="idtext" placeholder="사용자이름" name="username">
