@@ -74,7 +74,10 @@
         .btn {
             margin-left: 33px;
         }
-    
+        .error {
+            font-weight: 700;
+            color: red;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,6 +87,7 @@
 <body>
     <div class="container">
         <div class="sitename">SangjunTech</div>
+        <div class="error">{{error}}</div>
         <div class="loginform">
             <form method='POST' action=".">
                 {% csrf_token %}
@@ -99,6 +103,7 @@
                     <label for="pwtext2">CHECK PW</label>
                     <input type="password" class="pw_form" id="pwtext2" placeholder="비밀번호 확인" name="password2">
                 </div>
+                
                 <button type="submit" class="btn">sign in</button>
             </form>
         </div>
