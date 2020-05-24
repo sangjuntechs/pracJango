@@ -7,6 +7,8 @@ class User (models.Model):
 
     regiester_dttm = models.DateTimeField(auto_now_add=True, verbose_name='등록시간')
 
+    useremail = models.EmailField(max_length=128, verbose_name='이메일')
+
     def __str__(self):
         return self.username
 
