@@ -11,3 +11,7 @@ view.py에서 register.html에서 전달된 정보를 user 데이터베이스에
 jango admin을 통해 확인 완료.
 view.py 회원가입 비밀번호 확인과 값 입력에 대한 예외처리 로직 추가.
 email 모델 추가.
+
+## `2020/05/25`
+
+static url을 설정하여 장고 안에서 css,js 파일을 관리하는 방법

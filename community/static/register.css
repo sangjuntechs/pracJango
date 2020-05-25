@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+    width: 200px;
+    height: 250px;
+    box-shadow: 2px 8px 12px darkgray;
+    border-radius: 20px;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    all: unset;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    all: unset;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    padding: 3px 10px 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 50px;
+    width: 100px;
+    border: 2px solid darkgray;
+}
+
+.emailbox {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pwbox {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sitename {
+    font-size: 30px;
+    font-weight: 800;
+    color: dodgerblue;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.btn {
+    margin-left: 33px;
+}
+.error {
+    font-weight: 700;
+    color: red;
+}
