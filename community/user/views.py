@@ -1,7 +1,26 @@
 from django.shortcuts import render
-from .models import User
 from django.http import HttpResponse
-from django.contrib.auth.hashers import make_password
+from django.contrib.auth.hashers import make_password, check_password
+from .models import User
+
+def login(request):
+    if request.method == 'GET':
+        return render(request, 'login.html')
+    elif request.method =='POST':
+        username = request.POST.get('username',None)
+        password = request.POST.get('password',None)
+        
+        res_data={}
+        if not (username and password):
+            res_data['error'] = '올바른 정보를 입력하세요.'
+        else:
+            user = User.objects.get(username=username)
+            if check_password(password, user.password):
+                res_data['error'] = '로그인 성공'
+            else:
+                res_data['error'] = '비밀번호가 틀렸습니다.'
+    return render(request, 'login.html',res_data)
+
 
 def register(request) :
     if request.method == 'GET':

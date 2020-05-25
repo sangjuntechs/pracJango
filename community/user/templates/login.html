@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" href="/static/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sitename">SangjunTech</div>
+        <div class="error">{{error}}</div>
+        <div class="loginform">
+            <form method='POST' action=".">
+                {% csrf_token %}
+                <div class="emailbox">
+                    <label for="idtext">USERNAME</label>
+                    <input type="text" class="email_form" id="idtext" placeholder="사용자이름" name="username">
+                </div>
+                
+                <div class="pwbox">
+                    <label for="pwtext">PASSWORD</label>
+                    <input type="password" class="pw_form" id="pwtext" placeholder="비밀번호" name="password">
+                </div>
+               
+                
+                <button type="submit" class="btn">Login</button>
+</body>
+</html>
